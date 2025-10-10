@@ -5,19 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet "href="stylesheet.css" type="text/css">
+    <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <title>Admin Dashboard</title>
 </head>
-<body>
-  <div class="container">
-    <ul class="list">
-      <li><a href="">Link 1</a></li>
-      <li><a href="">Link 2</a></li>
-      <li><a href="">Link 3</a></li>
-      <li><a href="">Link 4</a></li>
-      <li><a href="">Link 5</a></li>
-    </ul>
-
+<body class="">
+  <div class="grid-container">
+    <div class="col-3 nav">
+      <div class="nav_item">
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>apps</title><path d="M7 7H3V3H7M13 7H9V3H13M19 7H15V3H19M7 13H3V9H7M13 13H9V9H13M19 13H15V9H19M7 19H3V15H7M13 19H9V15H13M19 19H15V15H19Z" /></svg>Dashboard</h3>
+      </div>
+      <div class="nav_item">
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>home-thatched</title><path d="M19 20H3V12H1V9H2V6H3V3H4V2H18V5H19V7H20V9H21V12H20V13H19M16 10V9H18V8H17V6H16V4H6V6H5V8H4V9H6V10H9V9H13V10M12 18V15H10V18M17 18V11H16V12H12V11H10V12H6V11H5V18H8V13H14V18Z" /></svg>Home</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>card-text</title><path d="M17 8V10H5V8H17M5 12H15V14H5V12M2 3H20V4H21V18H20V19H2V18H1V4H2V3M3 5V17H19V5H3Z" /></svg>Profile</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>message-text</title><path d="M2 1H20V2H21V16H20V17H5V18H4V19H3V20H2V21H1V2H2V1M3 3V16H4V15H19V3H3M5 6H17V8H5V6M5 10H14V12H5V10Z" /></svg>Message</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>clock</title><path d="M10 5H12V11H13V12H14V13H15V15H13V14H12V13H11V12H10V5M15 1V2H17V3H18V4H19V5H20V7H21V15H20V17H19V18H18V19H17V20H15V21H7V20H5V19H4V18H3V17H2V15H1V7H2V5H3V4H4V3H5V2H7V1H15M14 3H8V4H6V5H5V6H4V8H3V14H4V16H5V17H6V18H8V19H14V18H16V17H17V16H18V14H19V8H18V6H17V5H16V4H14V3Z" /></svg>History</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>clipboard</title><path d="M2 5H3V4H7V2H9V1H13V2H15V4H19V5H20V20H19V21H3V20H2V5M10 3V5H12V3H10M18 6H16V8H6V6H4V19H18V6Z" /></svg>Tasks</h3>
+      </div>
+      <div class="nav_item">
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>toolbox</title><path d="M2 6H7V3H8V2H14V3H15V6H20V7H21V19H20V20H2V19H1V7H2V6M9 6H13V4H9V6M19 8H3V12H6V10H9V12H13V10H16V12H19V8M3 18H19V14H16V16H13V14H9V16H6V14H3V18Z" /></svg>Settings</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>book</title><path d="M3 2H4V1H18V2H19V20H18V21H4V20H3V2M11 9H10V8H9V9H8V10H7V3H5V19H17V3H12V10H11V9Z" /></svg>Support</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>shield</title><path d="M3 4H5V3H7V2H9V1H13V2H15V3H17V4H19V14H18V16H17V18H16V19H15V20H13V21H9V20H7V19H6V18H5V16H4V14H3V4M10 3V4H8V5H6V6H5V13H6V15H7V17H8V18H10V19H12V18H14V17H15V15H16V13H17V6H16V5H14V4H12V3H10Z" /></svg>Privacy</h3>
+      </div>
+    </div>
+    <div class="col-9 header">
+      <div class="header_content">
+        <div class="top_row">
+          <form id="search" action="/search" method="GET">
+            <label for="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><title>search</title><path d="M19 20H18V19H17V18H16V17H15V16H14V15H13V14H11V15H6V14H4V13H3V11H2V6H3V4H4V3H6V2H11V3H13V4H14V6H15V11H14V13H15V14H16V15H17V16H18V17H19V18H20V19H19M11 13V12H12V11H13V6H12V5H11V4H6V5H5V6H4V11H5V12H6V13Z" /></svg></label>
+            <input type="search" id="search" name="search" placeholder="Search active projects...">
+          </form>
+          <div class="logged-in">
+            <div class="alert"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bell-alert-outline</title><path d="M12 2A2 2 0 0 0 10 4A2 2 0 0 0 10 4.29C7.12 5.14 5 7.82 5 11V17L3 19V20H21V19L19 17V11C19 7.82 16.88 5.14 14 4.29A2 2 0 0 0 14 4A2 2 0 0 0 12 2M12 6A5 5 0 0 1 17 11V18H7V11A5 5 0 0 1 12 6M21 7V13H23V7H21M21 15V17H23V15H21M10 21A2 2 0 0 0 12 23A2 2 0 0 0 14 21H10Z" /></svg></div>
+            <div class="icon"><img id="profile" src="Resources/user-profile.png" alt="Profile Icon"></div>
+            <div class="username"><h3>Travis Bickle</h3></div>
+          </div>
+        </div>
+        <div class="bottom_row">
+          <div class="greeting">
+            <div class="icon">
+              <img id="profile" src="Resources/user-profile.png" alt="Profile Icon">
+              <!-- <svg id="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>face-man-profile</title><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,8.39C13.57,9.4 15.42,10 17.42,10C18.2,10 18.95,9.91 19.67,9.74C19.88,10.45 20,11.21 20,12C20,16.41 16.41,20 12,20C9,20 6.39,18.34 5,15.89L6.75,14V13A1.25,1.25 0 0,1 8,11.75A1.25,1.25 0 0,1 9.25,13V14H12M16,11.75A1.25,1.25 0 0,0 14.75,13A1.25,1.25 0 0,0 16,14.25A1.25,1.25 0 0,0 17.25,13A1.25,1.25 0 0,0 16,11.75Z" /></svg> -->
+            </div>
+            <div class="user">
+              <p>Hi there,</p>
+              <h3>Travis Bickle (@TBickle)</h3>
+            </div>
+          </div>
+          <div class="btn_cluster">
+            <button class="btn">New</button>
+            <button class="btn">Upload</button>
+            <button class="btn">Share</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 main">
+      <h3> Your Projects</h3>
+      <div class="main_container">
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <H4>Project Alpha</H4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis illum similique cumque voluptate facere reiciendis aspernatur animi sit totam. Expedita illum nobis culpa exercitationem similique fugiat, animi explicabo aspernatur laborum?</p>
+          </div>
+          <div class="card_actions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-check-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17.8 21.2L15 18.2L16.2 17L17.8 18.6L21.4 15L22.6 16.4L17.8 21.2" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye-arrow-right-outline</title><path d="M12 4.5C7 4.5 2.7 7.6 1 12C2.7 16.4 7 19.5 12 19.5H13.1C13 19.2 13 18.9 13 18.5C13 18.1 13 17.8 13.1 17.4C12.7 17.4 12.4 17.5 12 17.5C8.2 17.5 4.8 15.4 3.2 12C4.8 8.6 8.2 6.5 12 6.5S19.2 8.6 20.8 12C20.7 12.2 20.5 12.4 20.4 12.7C21.1 12.9 21.7 13.1 22.3 13.5C22.6 13 22.8 12.5 23 12C21.3 7.6 17 4.5 12 4.5M12 9C10.3 9 9 10.3 9 12S10.3 15 12 15 15 13.7 15 12 13.7 9 12 9M19 21V19H15V17H19V15L22 18L19 21" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>share-variant-outline</title><path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" /></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 aside">
+      <div class="card_container">
+        <h3>Announcements</h3>
+        <div class="card aside-card">
+          <h4>Heading Words</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste vel et.</p>
+          <hr/>
+          <h4>Other Heading</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste vel et.</p>
+          <hr/>
+          <h4>3rd Headering</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste vel et.</p>
+        </div>
+      </div>
+      <div class="card_container">
+        <h3>Trending</h3>
+        <div class="card aside-card">
+          <div class="project-aside">
+            <div class="icon"><img id="profile" src="Resources/user-profile.png" alt="Profile Icon"></div>
+            <div class="user-details">
+              <h3>@TBickle</h3>
+              <div class="details">Taxi Driving Simulator</div>
+            </div>
+          </div>
+          <div class="project-aside">
+            <div class="icon"><img id="profile" src="Resources/user-profile.png" alt="Profile Icon"></div>
+            <div class="user-details">
+              <h3>@TBickle</h3>
+              <div class="details">Taxi Driving Simulator</div>
+            </div>
+          </div>
+          <div class="project-aside">
+            <div class="icon"><img id="profile" src="Resources/user-profile.png" alt="Profile Icon"></div>
+            <div class="user-details">
+              <h3>@TBickle</h3>
+              <div class="details">Taxi Driving Simulator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </body>
 </html>
