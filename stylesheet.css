@@ -1,30 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+
 :root {
-  --color-base-100: oklch(98.71% 0.02 123.72);
-  --color-base-200: oklch(91.8% 0.018 123.72);
-  --color-base-300: oklch(84.89% 0.017 123.72);
-  --color-base-content: oklch(19.742% 0.004 123.72);
-  --color-primary: oklch(58.92% 0.199 134.6);
-  --color-primary-content: oklch(11.784% 0.039 134.6);
-  --color-secondary: oklch(77.75% 0.196 111.09);
-  --color-secondary-content: oklch(15.55% 0.039 111.09);
-  --color-accent: oklch(85.39% 0.201 100.73);
-  --color-accent-content: oklch(17.078% 0.04 100.73);
-  --color-neutral: oklch(30.98% 0.075 108.6);
-  --color-neutral-content: oklch(86.196% 0.015 108.6);
-  --color-info: oklch(86.19% 0.047 224.14);
-  --color-info-content: oklch(17.238% 0.009 224.14);
-  --color-success: oklch(86.19% 0.047 157.85);
-  --color-success-content: oklch(17.238% 0.009 157.85);
-  --color-warning: oklch(86.19% 0.047 102.15);
-  --color-warning-content: oklch(17.238% 0.009 102.15);
-  --color-error: oklch(86.19% 0.047 25.85);
-  --color-error-content: oklch(17.238% 0.009 25.85);
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
-  --radius-box: 0.5rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 1;
+  --background: oklch(0.98 0 0);
+  --foreground: oklch(0.24 0 0);
+  --card: oklch(0.99 0 0);
+  --card-foreground: oklch(0.24 0 0);
+  --popover: oklch(0.99 0 0);
+  --popover-foreground: oklch(0.24 0 0);
+  --primary: oklch(0.43 0.04 42.00);
+  --primary-foreground: oklch(1.00 0 0);
+  --secondary: oklch(0.92 0.07 76.67);
+  --secondary-foreground: oklch(0.35 0.07 41.41);
+  --muted: oklch(0.95 0 0);
+  --muted-foreground: oklch(0.50 0 0);
+  --accent: oklch(0.93 0 0);
+  --accent-foreground: oklch(0.24 0 0);
+  --destructive: oklch(0.63 0.19 33.26);
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.88 0 0);
+  --ring: oklch(0.43 0.04 42.00);
+  --chart-1: oklch(0.43 0.04 42.00);
+  --chart-2: oklch(0.92 0.07 76.67);
+  --chart-3: oklch(0.93 0 0);
+  --chart-4: oklch(0.94 0.05 75.02);
+  --chart-5: oklch(0.43 0.04 42.00);
+  --sidebar: oklch(0.99 0 0);
+  --sidebar-foreground: oklch(0.26 0 0);
+  --sidebar-primary: oklch(0.33 0 0);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.98 0 0);
+  --sidebar-accent-foreground: oklch(0.33 0 0);
+  --sidebar-border: oklch(0.94 0 0);
+  --sidebar-ring: oklch(0.77 0 0);
+
+  --font-sans: 'Geist', 'Geist Fallback', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: "Geist", "Geist Fallback", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-heading: "BBH Sans Bogle", sans-serif;
+
+  --radius: 0.3rem;
+  
+  --shadow-2xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-md: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 2px 4px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-lg: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 4px 6px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 8px 10px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-2xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.25);
+  
+}
+
+.dark {
+  --background: oklch(0.18 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.21 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.21 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.92 0.05 67.14);
+  --primary-foreground: oklch(0.20 0.02 201.14);
+  --secondary: oklch(0.32 0.02 67.00);
+  --secondary-foreground: oklch(0.92 0.05 67.14);
+  --muted: oklch(0.25 0 0);
+  --muted-foreground: oklch(0.77 0 0);
+  --accent: oklch(0.29 0 0);
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(0.63 0.19 33.26);
+  --border: oklch(0.24 0.01 88.77);
+  --input: oklch(0.40 0 0);
+  --ring: oklch(0.92 0.05 67.14);
+  --chart-1: oklch(0.92 0.05 67.14);
+  --chart-2: oklch(0.32 0.02 67.00);
+  --chart-3: oklch(0.29 0 0);
+  --chart-4: oklch(0.35 0.02 67.11);
+  --chart-5: oklch(0.92 0.05 67.14);
+  --sidebar: oklch(0.21 0.01 285.56);
+  --sidebar-foreground: oklch(0.97 0 0);
+  --sidebar-primary: oklch(0.49 0.22 264.43);
+  --sidebar-primary-foreground: oklch(1.00 0 0);
+  --sidebar-accent: oklch(0.27 0.01 285.81);
+  --sidebar-accent-foreground: oklch(0.97 0 0);
+  --sidebar-border: oklch(0.27 0.01 285.81);
+  --sidebar-ring: oklch(0.87 0.01 286.27);
+  
+  --shadow-2xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-md: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 2px 4px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-lg: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 4px 6px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 8px 10px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-2xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.25);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-weight: 300;
+  font-size: 14px;
+  width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.3rem;
+  color: var(--foreground);
+}
+
+p {
+  line-height: 1.1rem;
+}
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+input {
+  margin-right: 0.5rem;
+  border-radius: var(--radius);
+  padding-left: 4px;
+}
+
+textarea {
+  height: 50px;
+  width: 100%;
+  resize: vertical;
+  margin-right: 0.5rem;
+  border-radius: var(--radius);
+}
+
+select option {
+  background-color: var(--background);
+}
+
+select option:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.drop {
+  background-color: var(--background);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 5px;
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header"
+    "form"
+    "contentGrid";
+}
+
+.popover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  background-color: var(--background);
+}
+
+.header {
+  grid-area: header;
+  height: 5rem;
+  text-align: center;
+  height: auto;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 12ch;
+  font-weight: 800;
+  background-image: url('Resources/gulfer-ergin-LUGuCtvlk1Q-unsplash.jpg');
+  background-size: cover;
+  background-position: right;
+  background-clip: text;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: auto;
+  width: auto;
+}
+
+.form {
+  grid-area: form;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.contentGrid {
+  grid-area: contentGrid;
+  display: grid;
+  grid-template-columns: 
+    repeat(auto-fill, minmax(min(150px, 100%), 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  height: auto;
+  width: 150px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2xl);
+  align-content: center;
+}
+
+.cover {
+  height: 180px;
+}
+
+.card-lg {
+  height: auto;
+  width: 350px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2xl);
+  align-content: center;
+}
+
+.cover-lg {
+  height: 220px;
+}
+
+.details {
+  background-color: var(--accent);
+  color: var(--primary);
+  text-align: center;
+  padding: 0.5rem;
+  box-shadow: var(--shadow-2xl);
+}
+
+.details h4 {
+  color: var(--foreground);
+  
 }

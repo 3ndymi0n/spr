@@ -1,56 +1,29 @@
-
-
-function computerTurnSelection(turns) {
-  const computerChoice = Math.floor(Math.random() * turns.length)
-  return turns[computerChoice];
-};
-
-function playerTurnSelection(choice) {
-  return choice === 'scissors' ? 'scissors'
-       : choice === 'paper' ? 'paper'
-       : 'rock'
-};
-
-function playRound() {
-  const turns = ["scissors", "paper", "rock"];
-  const RULES  = {
-    paper: "rock",
-    scissors: "paper",
-    rock: "scissors"
-  };
-
-  const computerTurn = computerTurnSelection(turns);
-  const playerTurn = playerTurnSelection(prompt("scissors, paper or rock?"));
-
-  console.log(`Computer picked ${computerTurn} and player picked ${playerTurn}.`)
-
-  if(RULES[playerTurn] === computerTurn) {
-    return "player";
-  } else if (RULES[computerTurn] === playerTurn) {
-    return "computer";
-  } else {
-    return "draw";
+function Book(title, author, pages) {
+  if(!new.target) {
+    throw Error("You must use the 'new' operator to call the constructor");
   }
-};
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.readState = "unread";
+}
 
-function playGame() {
-  let computerScore = 0;
-  let playerScore = 0;
-  let draw = 0;
-  let roundCounter = 0;
+Book.prototype.info = function() {
+  return `${this.title}, ${this.pages} pages, ${this.readState}`;
+}
 
-  while (computerScore < 5 && playerScore < 5) {
-    let round = playRound();
-    roundCounter += 1;
-    if (round === "player") {
-      playerScore += 1;
-    } else if (round === "computer"){
-      computerScore += 1;
-    } else {
-      draw += 1;
-    }
-    console.log(`Round ${roundCounter}, player score is ${playerScore} and computer Score is ${computerScore} and draw counter is ${draw}.`)
-  }
-};
+function Manga(title, author, pages, coverArt, mainCharacter) {
+  Book.call(this, title, author, pages, readState);
+  this.coverArt = coverArt;
+  this.mainCharacter = mainCharacter;
+}
 
-// playGame();
+Manga.prototype.mc = function() {
+  return `${this.mainCharacter}.`
+}
+
+Manga.prototype = Object.create(Book.prototype);
+Manga.prototype.constructor = Manga;
+
+const Noblesse = new Manga('Nobleese', 'X', 350, 'cover', 'Rai');
+
