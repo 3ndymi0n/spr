@@ -10,7 +10,7 @@
 </head>
 <body class="">
     <div class="container">
-        <div class="popover" id="popover">
+<!--         <div class="popover" id="popover">
             <div class="card-container">
                 <div class="card card-lg">
                 <div class="cover cover-lg">
@@ -27,10 +27,14 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> -->
         <div class="header">
-            <h1 class="logo">Athenaeum</h1>
+            <h1 class="logo">Project: Library</h1>
         </div>
+        <button class="btn" id="newBook">New Book</button>
+        <div class="contentGrid" id="contentGrid">
+    </div>
+    <dialog class="" id="new-book">
         <div class="form">
             <form id="add-title" name="add-title" autocomplete="off">
                 <h3>Add New Title</h3>
@@ -40,7 +44,7 @@
                     <input id="author" type="text" placeholder="Author" name="author" tabindex="2">
                     <input id="genre" type="text" placeholder="Genre" name="genre" tabindex="3">
                     <input id="coverArt" type="url" placeholder="Cover art url link (Optional)" name="coverArt" tabindex="4">
-                    <select class="drop"id="completion" type="text" placehodler="Book completion Status" tabindex="5">
+                    <select class="drop" id="completion" type="text" name="completion" placeholder="Book completion Status" tabindex="5">
                         <option value="unread">Unread</option>
                         <option value="reading">Reading</option>
                         <option value="finished">Finished</option>
@@ -49,101 +53,10 @@
                 <fieldset>
                     <textarea id="summary" placeholder="Enter a summary or review of the title you are submitting today" name="summary" tabindex="6"></textarea>
                     <input class="btn" id="submit" type="submit" value="Submit" name="submit">
+                    <button class="btn" id="close-modal">Close</button>
                 </fieldset>
             </form>
         </div>
-        <div class="contentGrid">
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cover">
-
-                </div>
-                <div class="details">
-                    <h4>Title</h2>
-                    <p>Author</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    </dialog>
 </body>
 </html>
